@@ -1,0 +1,260 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de fundo e layout geral */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #0044cc;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    background-color: #fff;
+    color: #0044cc;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #0044cc;
+    color: #fff;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Catálogo de Produtos */
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.produto button {
+    background-color: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #0033a0;
+}
+
+/* Carrinho de Compras */
+#carrinho {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+#carrinho h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#carrinhoItens p {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+#carrinhoItens button {
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#carrinhoItens button:hover {
+    background-color: #e04343;
+}
+
+#totalCarrinho {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 15px;
+    text-align: right;
+}
+
+#carrinho button {
+    background-color: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#carrinho button:hover {
+    background-color: #0033a0;
+}
+
+/* Modal de Login/Cadastro */
+#loginModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#loginModal h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#loginModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#loginModal button {
+    background-color: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#loginModal button:hover {
+    background-color: #0033a0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #carrinho {
+        width: 100%;
+    }
+}
+
+/* Imagem do Produto */
+.produto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do Logotipo */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 1.8em;
+    margin: 0;
+    vertical-align: middle;
+    color: #fff;
+}

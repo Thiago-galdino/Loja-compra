@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/DALL·E 2024-10-26 19.05.44 - A modern, vibrant logo design for a brand named 'Vem que tem'. The logo should have a friendly and inviting feel, using bright colors like green and y.webp" alt="Logotipo Vem que tem" class="logo">
+            <h1>Vem que tem</h1>
+        </div>
+        <div>
+            <span id="usuarioLogado"></span>
+            <button id="loginButton" onclick="toggleLoginModal()">Login</button>
+            <button id="logoutButton" onclick="logout()" style="display: none;">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo"></section>
+        <section id="carrinho">
+            <h2>Resumo do Carrinho</h2>
+            <div id="carrinhoItens"></div>
+            <div id="totalCarrinho"></div>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <div id="loginModal">
+        <h3>Login / Cadastro</h3>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <button onclick="signup()">Cadastrar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
